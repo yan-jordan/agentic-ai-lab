@@ -1,8 +1,13 @@
-from lab.models import chat_model , small_model , embedding_model
+from lab.models import chat_model, small_model, embedding_model
 
-llm = chat_model() # it goes for qwen , temperature 0 in default
+console = Console()
 
-response = llm.invoke("what is the capital of UnitedState? answer in one word !")
+# default model is Qwen , but you can add different model name here
+llm = chat_model()
+
+# for waiting in console
+with console.status("[bold green]Thinking...", spinner="dots"):
+    response = llm.invoke("what is the capital of UnitedState? answer in one word !")
 
 print("--- --- --- --- --- --- --- --- --- --- ---")
 print(type(response))
