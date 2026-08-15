@@ -28,7 +28,7 @@ messages = [
     ]
 ]
 
-# Other type of prompting for messages with dict
+# Other type of prompting for messages with Tuples and Dicts
 other_messages = [
     # Message 1
     {
@@ -37,7 +37,10 @@ other_messages = [
     # Message 2
     {
         "role" : "user" , "content" : "who is Trump?"
-    }
+    },
+    (
+        "ai" , "the capitcal of iran is tehran."
+    )
     # Message n ....
 ]
 
